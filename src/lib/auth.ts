@@ -52,7 +52,7 @@ export class AuthService {
 
   getGoogleAuthUrl(): string {
     const params = new URLSearchParams({
-      client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID || 'mock_client_id',
+      client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID || 'mock_client_id',
       redirect_uri: window.location.origin + '/auth/callback',
       response_type: 'code',
       scope: 'email profile openid',

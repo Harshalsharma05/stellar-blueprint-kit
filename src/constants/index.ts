@@ -63,6 +63,6 @@ export const API_ENDPOINTS = {
 };
 
 export const GOOGLE_OAUTH_CONFIG = {
-  CLIENT_ID: process.env.REACT_APP_GOOGLE_CLIENT_ID || '',
-  REDIRECT_URI: process.env.REACT_APP_GOOGLE_REDIRECT_URI || 'http://localhost:8080/auth/callback',
+  CLIENT_ID: import.meta.env.VITE_GOOGLE_CLIENT_ID || '',
+  REDIRECT_URI: import.meta.env.VITE_GOOGLE_REDIRECT_URI || 'http://localhost:8080/auth/callback',
 };
